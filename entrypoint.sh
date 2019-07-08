@@ -11,3 +11,6 @@ check_var "TARGET_BRANCH"
 
 # Also recommended by Github, setting after graceful variable checks
 set -u
+
+COMMIT_MESSAGE=$(get_commit_message)
+echo $COMMIT_MESSAGE

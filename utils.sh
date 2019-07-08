@@ -1,7 +1,3 @@
-say_hello() {
-  echo "Let's open a PR"
-}
-
 check_var() {
   key=$1
   echo "Checking env for ${key}..."
@@ -12,4 +8,8 @@ check_var() {
   fi
   echo "${key}=\"${val}\" (OK)"
   echo ""
+}
+
+get_commit_message() {
+  echo "${MESSAGE_PREFIX:-"Release Candidate"}: $(date +"%A, %b %d, %Y %H:%M:%S %z")"
 }
