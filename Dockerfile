@@ -9,6 +9,7 @@ LABEL repository="https://github.com/drewwyatt/auto-rc"
 LABEL maintainer="Drew Wyatt <drew.j.wyatt@gmail.com>"
 
 ADD entrypoint.sh /entrypoint.sh
+ADD utils.sh /utils.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 COPY LICENSE README.md /

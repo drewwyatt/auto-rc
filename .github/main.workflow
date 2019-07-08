@@ -5,5 +5,8 @@ workflow "Schedule Workflow" {
 
 action "Create an RC" {
   uses = "./"
-  args = "Boom boom pow"
+  env = {
+    SOURCE_BRANCH = "develop"
+    TARGET_BRANCH = "master"
+  }
 }
