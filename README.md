@@ -1,1 +1,1 @@
-# Open a Pull Request
+# Automatic Release Candidates
