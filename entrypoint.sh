@@ -17,5 +17,5 @@ COMMIT_MESSAGE=$(get_commit_message)
 echo "Commit Message:"
 echo $COMMIT_MESSAGE
 
-REPO_FULLNAME=$(jq -r ".repository.full_name" "${GITHUB_EVENT_PATH}")
+REPO_FULLNAME=$(jq --raw-output .pull_request.head.repo.name "$GITHUB_EVENT_PATH")
 echo $REPO_FULLNAME
