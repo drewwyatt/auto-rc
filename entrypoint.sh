@@ -13,4 +13,9 @@ check_var "TARGET_BRANCH"
 set -u
 
 COMMIT_MESSAGE=$(get_commit_message)
+
+echo "Commit Message:"
 echo $COMMIT_MESSAGE
+
+REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
+echo $REPO_FULLNAME
