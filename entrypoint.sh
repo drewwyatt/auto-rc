@@ -20,3 +20,4 @@ echo $COMMIT_MESSAGE
 REPO_FULLNAME=$(jq --raw-output .pull_request.head.repo.name "$GITHUB_EVENT_PATH")
 echo $REPO_FULLNAME
 echo $GITHUB_EVENT_PATH
+cat $GITHUB_EVENT_PATH
