@@ -10,7 +10,7 @@ LABEL maintainer="Drew Wyatt <drew.j.wyatt@gmail.com>"
 
 ADD entrypoint.sh /entrypoint.sh
 ADD utils.sh /utils.sh
-RUN apt-get update && apt-get install -y jq
+RUN apt-get update && apt-get install -y jq curl
 ENTRYPOINT ["/entrypoint.sh"]
 
 COPY LICENSE README.md /
