@@ -36,7 +36,7 @@ create_pull_request() {
     # Option 2: Open a new pull request
     else
         # Post the pull request
-        DATA="{\"title\":\"${TITLE}\", \"body\":\"${BODY}\", \"base\":\"${TARGET_BRANCH}\", \"head\":\"${SOURCE_BRANCH}\", \"draft\":\"${DRAFT}\"}"
+        DATA="{\"title\":\"${1}\", \"body\":\"${1}\", \"base\":\"${TARGET_BRANCH}\", \"head\":\"${SOURCE_BRANCH}\" }"
         echo "curl --user ${GITHUB_ACTOR} -X POST --data ${DATA} ${PULLS_URL}"
         curl -sSL -H "${AUTH_HEADER}" -H "${HEADER}" --user "${GITHUB_ACTOR}" -X POST --data "${DATA}" ${PULLS_URL}
         echo $?
