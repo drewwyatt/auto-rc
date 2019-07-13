@@ -1,6 +1,6 @@
 FROM debian:9.5-slim
 
-LABEL com.github.actions.name="Auto RC"
+LABEL com.github.actions.name="Draft an RC"
 LABEL com.github.actions.description="Github action for automating release candidates"
 LABEL com.github.actions.icon="git-pull-request"
 LABEL com.github.actions.color="purple"
